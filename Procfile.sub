@@ -1,2 +1,9 @@
 web: bash ./boot.sh "echo $0"
-worker0: fakechroot fakeroot chroot /app/.root /bin/sh -c 'cd /app && /usr/bin/R -f /app/run.R --gui-none --no-save --args 12000'
+worker0: R -f /app/run.R --gui-none --no-save --args 12000
+worker1: R -f /app/run.R --gui-none --no-save --args 12001
+worker2: R -f /app/run.R --gui-none --no-save --args 12002
+worker3: R -f /app/run.R --gui-none --no-save --args 12003
+worker4: R -f /app/run.R --gui-none --no-save --args 12004
+worker5: R -f /app/run.R --gui-none --no-save --args 12005
+worker6: R -f /app/run.R --gui-none --no-save --args 12006
+worker7: R -f /app/run.R --gui-none --no-save --args 12007
