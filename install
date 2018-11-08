@@ -1,0 +1,9 @@
+#!/bin/bash
+
+heroku create --stack heroku-16
+
+heroku buildpacks:add https://github.com/dpmccabe/heroku-buildpack-r.git#heroku-16-packrat
+heroku buildpacks:add https://github.com/virtualstaticvoid/heroku-buildpack-apache.git#noauthsticky
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-ruby.git
+
+git push heroku master
